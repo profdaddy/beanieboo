@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "BeanieBoo": {
+      "applicationId": "0p5WZtJHlZM3ERJYSBfnokM7KWbVgmdiaB0fO9HV",
+      "masterKey": "6AThmunbtnp9erRZVR2TtMPmzv04wnv9X2MsHz8d"
+    },
+    "_default": {
+      "link": "BeanieBoo"
+    }
+  }
+}
