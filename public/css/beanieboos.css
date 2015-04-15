@@ -18,3 +18,18 @@
    font-weight: normal;
    color: #333;
  }
+ 
+td {
+     font-size: 1em;
+     border: 1px solid #c8e3fc;
+     padding: 3px 7px 2px 7px;
+ }
+  
+th {
+   font-size: 1.1em;
+   text-align: left;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   padding-top: 5px;
+   padding-bottom: 4px;
+   background-color: #23a7f8;
+   color: #ffffff;

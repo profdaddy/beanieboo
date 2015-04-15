@@ -15,16 +15,21 @@ $(function() {
  
     var BeanieBoo = Parse.Object.extend("BeanieBoo");
     var BeanieBoos = Parse.Collection.extend({
-    	model: BeanieBoo
+    	model: BeanieBoo,
+    	query: (new Parse.Query(BeanieBoo)).limit(1000)
     });
     
+    
     var beanieBoos = new BeanieBoos();
+    beanieBoos.comparator = function(object) {
+    	return object.get("name");
+    };
     
     beanieBoos.fetch({
     	success: function(beanieBoos) {
     		var beanieBoosView = new BeanieBoosView({ collection: beanieBoos });
     		beanieBoosView.render();
-    		$('#bb-tbody').html(beanieBoosView.el);
+    		$('.bb-main-table').html(beanieBoosView.el);
     	},
     	error: function(beanieBoos, error) {
     		console.log(error);

@@ -21,33 +21,29 @@
   
   <body>
   	<div class="col-sm-8 bb-main">
-	  	<table class="bb-main-table">
-	  		<thead>
-	  			<tr>
-	  				<th>Name</th>
-	  				<th>Animal</th>
-	  				<th>Size</th>
-	  				<th>Keychain?</th>
-	  				<th>Notes</th>
-	  			</tr>
-	  			</tr>
-	  		</thead>
-	  		<tbody id="bb-tbody">
-	  		
-	  		</tbody>
+	  	<table class="bb-main-table">	  	
+	  			
 	  	</table>
   	</div>
   	
 	  			
   	<!-- Handlebars templates -->
   	<script id="bb-tpl" type="text/x-handlebars-template">
+  			<tr>
+  				<th id="bb-name">Name</th>
+  				<th id="bb-animal">Animal</th>
+  				<th id="bb-size">Size</th>
+  				<th id="bb-keychain">Keychain</th>
+  				<th id="bb-notes">Notes</th>
+  			</tr>
+  		
   		{{#each beanieBoo}}
   		<tr class="bb-entry">
-  			<td class="bb-name">{{name}}</td>
-  			<td class="bb-animal">{{animal}}</td>
-  			<td class="bb-size">{{size}}</td>
-  			<td class="bb-keychain">{{isKeychain}}</td>
-  			<td class="notes">{{notes}}</td>
+  			<td headers="bb-name">{{name}}</td>
+  			<td headers="bb-animal">{{animal}}</td>
+  			<td headers="bb-size">{{size}}</td>
+  			<td headers="bb-keychain">{{isKeychain}}</td>
+  			<td headers="notes">{{notes}}</td>
   		</tr>
   		{{/each}}
   	</script>	
